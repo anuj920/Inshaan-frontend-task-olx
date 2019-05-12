@@ -124,7 +124,7 @@ function showdiv() {
 
 
 $(document).ready(function () {
-    $(".login").click(function () {
+    $(".login,.sell-botton").click(function () {
             $("#login-page").css({
                 "display": "flex"
             })
