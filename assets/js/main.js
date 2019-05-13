@@ -140,11 +140,11 @@ $(document).ready(function () {
 $(document).ready(function () {
     like06 = 0;
     $("#like06").click(function () {
-        if (like == 0) {
+        if (like06 == 0) {
             $("#like06").css({
                 "color": "red",
             });
-            like = 1;
+            like06 = 1;
         } else if (like06 == 1) {
             $("#like06").css({
                 "color": "grey"
@@ -469,7 +469,7 @@ $(document).ready(function () {
                 "color": "red",
             });
             like24 = 1;
-        } else if (like == 1) {
+        } else if (like24 == 1) {
             $("#like24").css({
                 "color": "grey"
             });
