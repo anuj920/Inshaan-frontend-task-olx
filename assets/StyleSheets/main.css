@@ -489,8 +489,11 @@ button {
     right: 22.5px;
     top: 65%;
     cursor: pointer;
-    color: grey;
     transition: all 0.3s;
+}
+
+#like01,#like02,#like03,#like04,#like05,#like06,#like07,#like08,#like09,#like10,#like11,#like12,#like13,#like14,#like15,#like16,#like17,#like18,#like19,#like20,#like21,#like22,#like23,#like24,#like25,#like26,#like27,#like28,#like29{
+	color:gray;
 }
 
 .like:hover {
