@@ -3,21 +3,19 @@ searchBar.addEventListener('keyup', function (e) {
     const term = e.target.value.toLocaleLowerCase();
     const searchs = document.getElementsByClassName('description');
     $("#part1").toggle($('input').val().length == 0);
-    var abc=0;
+    var notfound = document.getElementById('notfound');
+    var hasResults = false;
     Array.from(searchs).forEach(function (search) {
         const title = search.textContent;
         if (title.toLowerCase().indexOf(term) != -1) {
             search.parentNode.parentNode.parentNode.style.display = 'block';
             $('.load-more').hide();
-            abc=1;
+            hasResults = true;
         } else {
             search.parentNode.parentNode.parentNode.style.display = 'none';
         }
-        if(abc==0){
-            $('#notfound').show();
-            $('.load-more').hide();
-        }
     });
+    notfound.style.display = hasResults ? 'none' : 'block';
 });
 
 
