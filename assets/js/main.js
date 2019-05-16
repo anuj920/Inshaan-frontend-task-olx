@@ -1,3 +1,27 @@
+const searchBar = document.forms['search-box'].querySelector('input');
+searchBar.addEventListener('keyup', function (e) {
+    const term = e.target.value.toLocaleLowerCase();
+    const searchs = document.getElementsByClassName('description');
+    $("#part1").toggle($('input').val().length == 0);
+    var abc=0;
+    Array.from(searchs).forEach(function (search) {
+        const title = search.textContent;
+        if (title.toLowerCase().indexOf(term) != -1) {
+            search.parentNode.parentNode.parentNode.style.display = 'block';
+            $('.load-more').hide();
+            abc=1;
+        } else {
+            search.parentNode.parentNode.parentNode.style.display = 'none';
+        }
+        if(abc==0){
+            $('#notfound').show();
+            $('.load-more').hide();
+        }
+    });
+});
+
+
+
 $(document).ready(function () {
     $(".load-more").click(function () {
         $("#part201").css({
@@ -37,6 +61,12 @@ $(document).ready(function () {
             "display": "block"
         })
         $("#part213").css({
+            "display": "block"
+        })
+        $("#part214").css({
+            "display": "block"
+        })
+        $("#part215").css({
             "display": "block"
         })
         $('.load-more').css({
